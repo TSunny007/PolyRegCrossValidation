@@ -42,7 +42,7 @@ for r in p_vals:
         while len(rands) < 10:
             # The 98 here is needs to be changed based on data becasue the provided data has only 
             # 98 data points
-            newRand = random.randint(0,98)
+            newRand = random.randint(0,99)
             # shouldn't have repitions of data...
             if newRand not in rands:
                 rands.add(newRand)
