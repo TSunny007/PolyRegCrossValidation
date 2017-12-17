@@ -25,10 +25,10 @@ def CalculateSSE(xTrain,yTrain,xE,yE,p,Sum):
     ffit = np.poly1d(coefs)
     resid = ffit(xE)
     RMSE = LA.norm(resid-yE)
-    SSE = RMSE * RMSE
+    SSE = RMSE * RMSE/len(xTrain)
     Sum.append(SSE)
 
-p_vals = [1,2,3,4,5]#These are the degrees of regression we are interested in fitting to our data
+p_vals = [1,2,3,4,5,6,7,8,9,10]#These are the degrees of regression we are interested in fitting to our data
 for r in p_vals: 
     Sum = []
     # we will try each regression 50 times with random texting (10 entries~ 10.2% of data) 
